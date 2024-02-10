@@ -25,7 +25,7 @@ jobs:
     - name: Robot Framework
       uses: joonvena/robotframework-docker-action@v1.1
       with:
-        robot_tests_dir: './AutomacaoBackofficeWeb/tests/Login.robot'
+        robot_tests_dir: '../../AutomacaoBackofficeWeb/tests/Login.robot'
         robot_reports_dir: './reports'
     
           
