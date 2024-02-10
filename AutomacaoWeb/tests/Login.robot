@@ -23,7 +23,7 @@ Realizo o acesso do sistema - usuario e senha invalido
 
 Realizo o acesso do sistema - sem usuario e senha
     [Tags]    realizar login    sem usuario
-    Given que eu estou no saucedemo
+    Given que eu estou no saucedemo 
     When insiro os dados de usuario e senha
     Then verifico se nao estou logado no sistema sem usuario
 
