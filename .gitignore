@@ -1,0 +1,12 @@
+__pycache__
+*.pyc
+tests/logs/
+.idea/
+.vscode/
+*.html
+*.xml
+*.png
+*.pdf
+/AutomacaoBackofficeWeb/tests/*.xml
+/AutomacaoBackofficeWeb/tests/*.png
+/AutomacaoBackofficeWeb/tests/*.html
