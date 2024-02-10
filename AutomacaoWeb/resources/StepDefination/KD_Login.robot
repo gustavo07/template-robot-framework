@@ -1,6 +1,5 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource    ../Variables/variables_user_pass.robot
 Resource    ../Elements/Page_Elements_Login.robot
 Resource    utils/KD_Help.robot
 
