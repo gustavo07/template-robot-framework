@@ -1,10 +1,9 @@
 ﻿robotframework==5.0.1
 robotframework-assertion-engine==0.6.0
 robotframework-browser==14.2.1
-robotframework-metrics==3.3.3
 robotframework-pythonlibcore==4.1.2
 robotframework-seleniumlibrary==6.0.0
 selenium==4.5.0
-webdrivermanager==3.8.4
+webdrivermanager
 rpaframework-core==10.4.3
 rpaframework-pdf==7.1.3
