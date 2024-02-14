@@ -23,7 +23,7 @@ jobs:
     #     pip install flake8 pytest
     #     if [ -f requirements.txt ]; then pip install -r requirements.txt; fi 
     - name: test
-      run: echo $GITHUB_WORKSPACE
+      run: cd $GITHUB_WORKSPACE/AutomacaoWeb
     - name: test 2
       run: ls
     # - name: Robot Framework
