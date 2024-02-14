@@ -26,11 +26,11 @@ jobs:
       run: ls $GITHUB_WORKSPACE/AutomacaoWeb/tests/
     - name: Robot Framework - Tests
       run: robot $GITHUB_WORKSPACE/AutomacaoWeb/tests/*.robot
-    - name: Upload artifact
-      uses: actions/upload-artifact@v1
+    - name: Publish test results
+      uses: actions/upload-artifact@v2
       with:
-        name: surefire-reports
-        path: ./target/surefire-reports/**
+        name: robot-test-results
+        path: results
     # - name: Robot Framework
     #   uses: joonvena/robotframework-docker-action@v1.1
     #   with:
