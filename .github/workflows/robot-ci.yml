@@ -25,16 +25,11 @@ jobs:
     - name: local
       run: ls $GITHUB_WORKSPACE/AutomacaoWeb/tests/
     - name: Robot Framework - Tests
-      run: robot $GITHUB_WORKSPACE/AutomacaoWeb/tests/*.robot -d results
-    - name: Publish test results
-      uses: actions/upload-artifact@v2
+      run: robot $GITHUB_WORKSPACE/AutomacaoWeb/tests/*.robot
+    - name: Robot Framework
+      uses: joonvena/robotframework-docker-action@v1.1
       with:
-        name: robot-test-results
-        path: results
-    # - name: Robot Framework
-    #   uses: joonvena/robotframework-docker-action@v1.1
-    #   with:
+         robot_reports_dir: '$GITHUB_WORKSPACE/reports'
     #     robot_tests_dir: $GITHUB_WORKSPACE/AutomacaoWeb/tests/
-    # #     # robot_reports_dir: './reports'
     
           
