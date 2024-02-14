@@ -24,10 +24,12 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi 
     - name: local
       run: ls $GITHUB_WORKSPACE/AutomacaoWeb/tests/
-    - name: Robot Framework
-      uses: joonvena/robotframework-docker-action@v1.1
-      with:
-        robot_tests_dir: $GITHUB_WORKSPACE/AutomacaoWeb/tests/
-    #     # robot_reports_dir: './reports'
+    - name: robot
+      run: robot $GITHUB_WORKSPACE/AutomacaoWeb/tests/*.robot
+    # - name: Robot Framework
+    #   uses: joonvena/robotframework-docker-action@v1.1
+    #   with:
+    #     robot_tests_dir: $GITHUB_WORKSPACE/AutomacaoWeb/tests/
+    # #     # robot_reports_dir: './reports'
     
           
