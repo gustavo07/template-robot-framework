@@ -30,7 +30,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: surefire-reports
-        path: mymeeave/target/surefire-reports/**
+        path: ./target/surefire-reports/**
     # - name: Robot Framework
     #   uses: joonvena/robotframework-docker-action@v1.1
     #   with:
