@@ -26,10 +26,4 @@ jobs:
       run: ls $GITHUB_WORKSPACE/AutomacaoWeb/tests/
     - name: Robot Framework - Tests
       run: robot $GITHUB_WORKSPACE/AutomacaoWeb/tests/*.robot
-    - name: Robot Framework
-      uses: joonvena/robotframework-docker-action@v1.1
-      with:
-         robot_reports_dir: '$GITHUB_WORKSPACE/reports'
-    #     robot_tests_dir: $GITHUB_WORKSPACE/AutomacaoWeb/tests/
-    
-          
+      
