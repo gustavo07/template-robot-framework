@@ -25,7 +25,7 @@ jobs:
     - name: local
       run: ls $GITHUB_WORKSPACE/AutomacaoWeb/tests/
     - name: Robot Framework - Tests
-      run: robot $GITHUB_WORKSPACE/AutomacaoWeb/tests/*.robot
+      run: robot $GITHUB_WORKSPACE/AutomacaoWeb/tests/*.robot --outputdir results
     - name: Publish test results
       uses: actions/upload-artifact@v2
       with:
