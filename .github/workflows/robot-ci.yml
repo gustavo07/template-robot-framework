@@ -24,8 +24,13 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi 
     - name: local
       run: ls $GITHUB_WORKSPACE/AutomacaoWeb/tests/
-    - name: robot
+    - name: Robot Framework - Tests
       run: robot $GITHUB_WORKSPACE/AutomacaoWeb/tests/*.robot
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: surefire-reports
+        path: mymeeave/target/surefire-reports/**
     # - name: Robot Framework
     #   uses: joonvena/robotframework-docker-action@v1.1
     #   with:
