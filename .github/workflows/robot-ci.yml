@@ -26,7 +26,7 @@ jobs:
     #   run: ls $GITHUB_WORKSPACE/AutomacaoWeb/tests/
     - name: Robot Framework - Tests
       if: always()
-      run: robot -d results $GITHUB_WORKSPACE/AutomacaoWeb/tests/*.robot
+      run: pabot -d results $GITHUB_WORKSPACE/AutomacaoWeb/tests/*.robot
     # Etapa de geração de um report personalizado
     - name: Download robotmetrics
       if: always()
