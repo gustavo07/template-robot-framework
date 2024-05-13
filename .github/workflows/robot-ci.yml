@@ -26,4 +26,17 @@ jobs:
       run: ls $GITHUB_WORKSPACE/AutomacaoWeb/tests/
     - name: Robot Framework - Tests
       run: robot $GITHUB_WORKSPACE/AutomacaoWeb/tests/*.robot
+    # Etapa de geração de um report personalizado
+    - name: Download robotmetrics
+      if: always()
+      run: |
+        cd results
+        robotmetrics -M regression_metrics.html
+    # Etapa de publicação do report em uma pasta no projeto chamada results
+    - name: Publish test results
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: robot-test-results
+        path: results
       
