@@ -21,5 +21,5 @@ Abrir navegador
 
 Fechar navegador
     Close Browser
-    Adicionar arquivos no PDF
+    # Adicionar arquivos no PDF
 
