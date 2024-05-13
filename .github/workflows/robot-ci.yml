@@ -2,7 +2,7 @@ name: Robot CI
 
 on:
   push:
-    branches: [ "feature/reportCI" ]
+    branches: [ "main" ]
     
   workflow_dispatch:
   
@@ -43,4 +43,3 @@ jobs:
       with:
         name: robot-test-results
         path: results
-      
