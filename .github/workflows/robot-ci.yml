@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   
 jobs:
-  build:
+  Robot-Framework-Testes:
 
     runs-on: ubuntu-latest
 
@@ -22,10 +22,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi 
-    - name: local
-      run: ls $GITHUB_WORKSPACE/AutomacaoWeb/tests/
+    # - name: local
+    #   run: ls $GITHUB_WORKSPACE/AutomacaoWeb/tests/
     - name: Robot Framework - Tests
-      run: robot $GITHUB_WORKSPACE/AutomacaoWeb/tests/*.robot
+      if: always()
+      run: robot -d results $GITHUB_WORKSPACE/AutomacaoWeb/tests/*.robot
     # Etapa de geração de um report personalizado
     - name: Download robotmetrics
       if: always()
