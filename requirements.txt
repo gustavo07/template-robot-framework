@@ -7,3 +7,4 @@ selenium==4.5.0
 webdrivermanager
 rpaframework-core==10.4.3
 rpaframework-pdf==7.1.3
+robotframework-pabot==2.14.0
